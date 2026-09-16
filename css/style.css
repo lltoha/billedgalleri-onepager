@@ -1,0 +1,114 @@
+:root{
+  /* css variabler */
+  --brand: coral;
+  --bg: #fff;
+  --fg: #111;
+  --radius: 12px;
+  --space: 20px;
+  --shadow: 0 8px 24px rgb(0 0 0 / 10%);
+  font-size: 62.5%; /* nu er 1rem = 10px */
+}
+
+body{
+  margin:0;
+  font-family: system-ui, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+.container{
+  max-width: 1200px;
+  margin-inline:auto;
+  padding: var(--space);
+}
+
+.site-header{
+  text-align: center;
+  margin-block: 10px 30px;
+}
+
+.site-header h1{
+  margin:0 0 6px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  color: var(--brand);
+}
+
+.lead{ 
+  color:#555; 
+  margin:0;
+font-size: 1.6rem; }
+
+.site-footer{ 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align:right; 
+  color:var(--brand); 
+  margin-top:30px; 
+  font-size: 1.6rem;
+}
+
+.skip-link{
+  position:absolute; left:-9999px; top:auto;
+}
+.skip-link:focus-visible{
+  left:1rem; top:1.6rem;
+  background:#000; 
+  color:#fff;
+  padding:.6rem .8rem; 
+  border-radius:.6rem;
+  z-index:1000;
+}
+
+.gallery{
+  display:grid;
+  gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+.image{
+  position:relative;
+  overflow:hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background:#f6f6f6;
+}
+.image img{
+  width:100%; 
+  height:auto; 
+  display:block;
+  transition: transform .3s ease;
+}
+.image:hover img,
+.image:focus-within img{ transform: scale(1.06); }
+
+.image figcaption{
+  position:absolute; left:0; right:0; bottom:0;
+  padding:10px 12px; color:#fff; font-weight:600;
+  text-shadow:0 1px 2px rgb(0 0 0 / 50%);
+  font-size: 1.4rem;
+}
+
+.overlay{
+  position:absolute; inset:auto 0 0 0;
+  background: linear-gradient(to top, rgb(0 0 0 / .6), rgb(0 0 0 / 0));
+  color:#fff; padding:36px 12px 10px;
+  opacity:0; transition:opacity .2s ease;
+  text-align:center; font-size:1.6rem;
+}
+.image:hover .overlay,
+.image:focus-within .overlay{ opacity:1; }
+
+.go-to-top{
+  position:fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background:#333; color:#fff;
+  padding:10px 14px; border:0; border-radius:var(--radius);
+  opacity:0; pointer-events:none;
+  transition:opacity .3s ease, transform .2s ease;
+}
+.go-to-top.show{ opacity:1; pointer-events:auto; transform:translateX(-50%); }
+
+dialog.lightbox{ border:none; padding:0; background:transparent; }
+dialog.lightbox::backdrop{ background:rgb(0 0 0 / 65%); }
+.lightbox img{ max-width:90vw; max-height:80vh; border-radius:var(--radius); }
+.lightbox form{ text-align:center; margin-top:10px; }
+.lightbox button{ background:var(--brand); border:0; padding:8px 12px; border-radius:var(--radius); }

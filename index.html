@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One-page billedgalleri</title>
+
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="icon" href="img/favicon.ico" />
+  <meta name="description" content="Et simpelt, responsivt billedgalleri i HTML, CSS og JavaScript." />
+<script data-cfasync="false" nonce="6b5f698a-e8d6-47d7-a27d-816e760d6f29">try{(function(w,d){!function(lP,lQ,lR,lS){if(lP.zaraz)console.error("zaraz is loaded twice");else{lP[lR]=lP[lR]||{};lP[lR].executed=[];lP.zaraz={deferred:[],listeners:[]};lP.zaraz._v="20";lP.zaraz._n="6b5f698a-e8d6-47d7-a27d-816e760d6f29";lP.zaraz.q=[];lP.zaraz._f=function(lT){return async function(){var lU=Array.prototype.slice.call(arguments);lP.zaraz.q.push({m:lT,a:lU})}};for(const lV of["track","set","debug"])lP.zaraz[lV]=lP.zaraz._f(lV);lP.zaraz.init=()=>{var lW=lQ.getElementsByTagName(lS)[0],lX=lQ.createElement(lS),lY=lQ.getElementsByTagName("title")[0];lY&&(lP[lR].t=lQ.getElementsByTagName("title")[0].text);lP[lR].x=Math.random();lP[lR].w=lP.screen.width;lP[lR].h=lP.screen.height;lP[lR].j=lP.innerHeight;lP[lR].e=lP.innerWidth;lP[lR].l=lP.location.href;lP[lR].r=lQ.referrer;lP[lR].k=lP.screen.colorDepth;lP[lR].n=lQ.characterSet;lP[lR].o=(new Date).getTimezoneOffset();if(lP.dataLayer)for(const lZ of Object.entries(Object.entries(dataLayer).reduce((l$,ma)=>({...l$[1],...ma[1]}),{})))zaraz.set(lZ[0],lZ[1],{scope:"page"});lP[lR].q=[];for(;lP.zaraz.q.length;){const mb=lP.zaraz.q.shift();lP[lR].q.push(mb)}lX.defer=!0;for(const mc of[localStorage,sessionStorage])Object.keys(mc||{}).filter(me=>me.startsWith("_zaraz_")).forEach(md=>{try{lP[lR]["z_"+md.slice(7)]=JSON.parse(mc.getItem(md))}catch{lP[lR]["z_"+md.slice(7)]=mc.getItem(md)}});lX.referrerPolicy="origin";lX.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(lP[lR])));lW.parentNode.insertBefore(lX,lW)};["complete","interactive"].includes(lQ.readyState)?zaraz.init():lP.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async nK=>new Promise(nL=>{if(nK){nK.e&&nK.e.forEach(nM=>{try{const nN=d.querySelector("script[nonce]"),nO=nN?.nonce||nN?.getAttribute("nonce"),nP=d.createElement("script");nO&&(nP.nonce=nO);nP.innerHTML=nM;nP.onload=()=>{d.head.removeChild(nP)};d.head.appendChild(nP)}catch(nQ){console.error(`Error executing script: ${nM}\n`,nQ)}});Promise.allSettled((nK.f||[]).map(nR=>fetch(nR[0],nR[1])))}nL()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+<body id="top">
+  <a class="skip-link" href="#main">Spring til indhold</a>
+
+  <div class="container">
+    <header class="site-header">
+      <h1>Billedgalleri</h1>
+      <p class="lead">Et minimalt, responsivt galleri med overlay, lazy-loading og lightbox.</p>
+    </header>
+
+    <main id="main" class="gallery" aria-label="Billedgalleri">
+      <figure class="image">
+        <img src="img/photo1.jpg" alt="Te-tjener" loading="lazy">
+        <figcaption>Te-tjener</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+      <figure class="image">
+        <img src="img/photo2.jpg" alt="Dollargrin" loading="lazy">
+        <figcaption>Dollargrin</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+      <figure class="image">
+        <img src="img/photo3.jpg" alt="Selfie-kalkun" loading="lazy">
+        <figcaption>Selfie-kalkun</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo4.jpg" alt="Fejet under gulvtæppet" loading="lazy">
+        <figcaption>Fejet under gulvtæppet</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo5.jpg" alt="Byggeplads-catwalk" loading="lazy">
+        <figcaption>Byggeplads-catwalk</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo6.jpg" alt="Dødens gab" loading="lazy">
+        <figcaption>Dødens gab</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo7.jpg" alt="Hjernevask" loading="lazy">
+        <figcaption>Hjernevask</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo8.jpg" alt="Ud af byen" loading="lazy">
+        <figcaption>Ud af byen</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo9.jpg" alt="Thumbs up" loading="lazy">
+        <figcaption>Thumbs up</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo10.jpg" alt="Gorilla-headphones" loading="lazy">
+        <figcaption>Gorilla-headphones</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo11.jpg" alt="Birkes-barbering" loading="lazy">
+        <figcaption>Birkes-barbering</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo12.jpg" alt="Cykel i regn" loading="lazy">
+        <figcaption>Cykel i regn</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo13.jpg" alt="00100" loading="lazy">
+        <figcaption>00100</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo14.jpg" alt="Side eyes" loading="lazy">
+        <figcaption>Side eyes</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+
+       <figure class="image">
+        <img src="img/photo15.jpg" alt="Gå i land" loading="lazy">
+        <figcaption>Gå i land</figcaption>
+        <div class="overlay" aria-hidden="true">Klik for stor visning</div>
+      </figure>
+    </main>
+
+    <button class="go-to-top" aria-label="Tilbage til toppen">Til toppen</button>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Dit Navn</p>
+    </footer>
+  </div>
+
+  <script src="js/app.js" defer></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a34bd575380314db',t:'MTc4ODM0NDk2OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
